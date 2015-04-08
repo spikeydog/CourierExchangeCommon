@@ -1,4 +1,4 @@
-package delivery;
+package common.delivery;
 
 import java.io.Serializable;
 import java.sql.Timestamp;

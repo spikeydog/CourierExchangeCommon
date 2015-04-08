@@ -1,10 +1,10 @@
-package user;
+package common.user;
 
 import java.io.Serializable;
 
 
 /**
- * This class models a user of the system and facilitates RMI by defining 
+ * This class models a common.user of the system and facilitates RMI by defining 
  * shared entity class definitions.
  * 
  * @author sedog

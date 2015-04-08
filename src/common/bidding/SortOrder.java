@@ -1,4 +1,4 @@
-package bidding;
+package common.bidding;
 
 public enum SortOrder {
 	DESC,

@@ -5,4 +5,4 @@
  * @author sedog
  *
  */
-package user;
+package common;

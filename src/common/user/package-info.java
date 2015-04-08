@@ -5,4 +5,4 @@
  * @author sedog
  *
  */
-package bidding;
+package common.user;

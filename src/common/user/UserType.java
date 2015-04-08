@@ -1,31 +1,22 @@
-package delivery;
+package common.user;
 
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * This class defines the set of viable states that a <code>DeliveryRequest</code> can
- * be in.
- * 
- * @author sedog
- *
- */
-public enum Status {
-	SAVED(1),
-	POSTED(2),
-	IN_PROGRESS(3),
-	COMPLETE(4);
+public enum UserType {
+	COURIER(1),
+	CUSTOMER(2);
 	
-	public final int value;
+public final int value;
 	
-	private Status(int value) {
+	private UserType(int value) {
 		this.value = value;
 	}
 	
 	// Mapping of integer values to human-readable Status values
-	private static Map<Integer, Status> map = new HashMap<Integer, Status>();
+	private static Map<Integer, UserType> map = new HashMap<Integer, UserType>();
 	static {
-		for (Status status : Status.values()) {
+		for (UserType status : UserType.values()) {
 			map.put((Integer) status.value, status);
 		}
 	}
@@ -36,7 +27,7 @@ public enum Status {
 	 * @param value	integer stored in the database for this <code>Status</code>
 	 * @return		<code>Status</code> mapped to <code>value</code>
 	 */
-	public static final Status map(int value) {
+	public static final UserType map(int value) {
 		return map.get((Integer) value);
 	}
 }

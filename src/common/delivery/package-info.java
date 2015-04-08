@@ -5,4 +5,4 @@
  * @author sedog
  *
  */
-package delivery;
+package common.delivery;
