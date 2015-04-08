@@ -1,7 +1,8 @@
-package common;
+package delivery;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+
 /**
  * Interface allowing local and RMI access to the definition for a <code>
  * DeliveryRequestCE</code> object and its methods.

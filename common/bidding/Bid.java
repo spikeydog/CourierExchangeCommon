@@ -1,4 +1,4 @@
-package common;
+package bidding;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -58,12 +58,22 @@ public interface Bid extends Serializable {
 	/**
 	 * @return the hasPendingUpdate
 	 */
-	public boolean isHasPendingUpdate();
+	public boolean isPendingUpdate();
 	
 	/**
 	 * @param hasPendingUpdate the hasPendingUpdate to set
 	 */
-	public void setHasPendingUpdate(boolean hasPendingUpdate);
+	public void setIsPendingUpdate(boolean hasPendingUpdate);
+	
+	/**
+	 * @return the isAccepted
+	 */
+	public boolean isAccepted();
+	
+	/**
+	 * @param hasPendingUpdate the hasPendingUpdate to set
+	 */
+	public void setIsAccepted(boolean isAccepted);
 	
 	/**
 	 * @return the pickUpTime

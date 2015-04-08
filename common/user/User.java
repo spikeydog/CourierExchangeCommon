@@ -1,6 +1,7 @@
-package common;
+package user;
 
 import java.io.Serializable;
+
 
 /**
  * This class models a user of the system and facilitates RMI by defining 
