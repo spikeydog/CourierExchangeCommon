@@ -3,11 +3,14 @@ package common.delivery;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class DeliveryRequestCE implements DeliveryRequest, Serializable {
+public class DeliveryRequestCE implements DeliveryRequest, Serializable, Cloneable {
 	private static final long serialVersionUID = 345L;
-	private int bidID;
-	private int customerID;
-	private int deliveryRequestID;
+	public static final int DEFAULT_REQ_ID = 0;
+	public static final int DEFAULT_BID_ID = 0;
+	public static final int DEFAULT_CUST_ID = 0;
+	private int bidID = DEFAULT_BID_ID;
+	private int customerID = DEFAULT_CUST_ID;
+	private int deliveryRequestID = DEFAULT_REQ_ID;
 	private String description;
 	private Timestamp dropOffTime;
 	private String dropOffAddress;
@@ -16,8 +19,9 @@ public class DeliveryRequestCE implements DeliveryRequest, Serializable {
 	private String pickUpAddress;
 	private Timestamp realPickUpTime;
 	private Timestamp postTime;
-	private Status status;
-	private float weight;
+	private Status status = Status.SAVED;
+	private float weight = Float.NaN;
+	
 	/**
 	 * @return the bidID
 	 */
@@ -175,6 +179,59 @@ public class DeliveryRequestCE implements DeliveryRequest, Serializable {
 		this.weight = weight;
 	}
 	
+	/**
+	 * Returns a <code>String</code> representation of this <code>DeliveryRequest</code>
+	 * @return	<code>String</code>
+	 */
+	@Override
+	public String toString() {
+		StringBuilder scribe = new StringBuilder();
+		
+		scribe.append("deliveryRequestID:")
+				.append(this.deliveryRequestID)
+				.append("bidID:").append(this.bidID).append("\n")
+				.append("customerID:").append(this.customerID).append("\n")
+				.append("description:").append(this.description).append("\n")
+				.append("dropOffTime:")
+				.append(this.dropOffTime == null? "null" : this.dropOffTime).append("\n")
+				.append("dropOffAddress:")
+				.append(this.dropOffAddress == null? "null" : this.dropOffAddress).append("\n")
+				.append("realDropOffTime:")
+				.append(this.realDropOffTime == null? "null" : this.realDropOffTime).append("\n")
+				.append("pickUpTime:")
+				.append(this.pickUpTime == null? "null" : this.pickUpTime).append("\n")
+				.append("pickUpAddress:")
+				.append(this.pickUpAddress == null? "null" : this.pickUpAddress).append("\n")
+				.append("realPickUpTime:")
+				.append(this.realPickUpTime == null? "null" : this.realPickUpTime).append("\n")
+				.append("postTime:")
+				.append(this.postTime == null? "null" : this.postTime).append("\n")
+				.append("status:").append(this.status.name()).append("\n")
+				.append("weight:").append(this.weight).append("\n");
+		
+		return scribe.toString();
+	}
 	
+	/**
+	 * Returns only a base copy of this <code>DeliveryRequest</code>.
+	 */
+	@Override
+	public DeliveryRequestCE clone() {
+		// The copy to return
+		DeliveryRequestCE copy = null;
+		try {
+			copy = (DeliveryRequestCE) super.clone();
+		} catch (CloneNotSupportedException ex) {
+			// Nothing to do here, really.
+		}
+		copy.setDropOffTime(this.dropOffTime);
+		copy.setPickUpTime(this.pickUpTime);
+		copy.setDescription(this.description);
+		copy.setWeight(this.weight);
+		copy.setCustomerID(this.customerID);
+		copy.setStatus(Status.SAVED);
+		
+		return copy;
+	}
 
 }

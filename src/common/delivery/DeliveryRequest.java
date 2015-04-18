@@ -9,7 +9,7 @@ import java.sql.Timestamp;
  * 
  * @author sedog
  */
-public interface DeliveryRequest extends Serializable {
+public interface DeliveryRequest extends Serializable, Cloneable {
 
     /**
      * @return the bidID
@@ -139,4 +139,10 @@ public interface DeliveryRequest extends Serializable {
      * @param weight the weight to set
      */
     public void setWeight(float weight);
+    
+    /**
+     * @return String representation of this DeliveryRequest
+     */
+    @Override 
+    public String toString();
 }
