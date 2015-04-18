@@ -3,7 +3,7 @@ package common.bidding;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-public interface Bid extends Serializable {
+public interface Bid extends Serializable, Cloneable {
 	
 	/**
 	 * @return the bidID
@@ -84,4 +84,12 @@ public interface Bid extends Serializable {
 	 * @param pickUpTime the pickUpTime to set
 	 */
 	public void setPickUpTime(Timestamp pickUpTime);
+	
+	/**
+	 * @return
+	 */
+	public Bid clone();
+	
+	@Override
+	public String toString();
 }
