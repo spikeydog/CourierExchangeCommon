@@ -55,12 +55,22 @@ public interface User extends Serializable {
 	/**
 	 * @return the streetAddress
 	 */
-	public String getStreetAddress();
+	public String getStreetAddress1();
 	
 	/**
 	 * @param streetAddress the streetAddress to set
 	 */
-	public void setStreetAddress(String streetAddress);
+	public void setStreetAddress1(String streetAddress);
+	
+	/**
+	 * @return the streetAddress
+	 */
+	public String getStreetAddress2();
+	
+	/**
+	 * @param streetAddress the streetAddress to set
+	 */
+	public void setStreetAddress2(String streetAddress);
 	
 	/**
 	 * @return the userID
@@ -101,4 +111,7 @@ public interface User extends Serializable {
 	 * @param zipCode the zipCode to set
 	 */
 	public void setZipCode(String zipCode);
+	
+	public String getPassword();
+	public void setPassword(String password);
 }

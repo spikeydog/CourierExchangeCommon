@@ -3,6 +3,12 @@ package common.user;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * This enumeration stores the types of users of the system and an integer value 
+ * that can be stored in the database. 
+ * @author sedog
+ *
+ */
 public enum UserType {
 	COURIER(1),
 	CUSTOMER(2);

@@ -16,9 +16,10 @@ import java.sql.Timestamp;
 public class BidCE implements Bid, Serializable {
     public final static int DEFAULT_COURIER_ID = 0;
     public final static int DEFAULT_REQ_ID = 0;
+    public final static int DEFAULT_BID_ID = 0;
     public final static float DEFAULT_FEE = Float.NaN;
     private static final long serialVersionUID = 1234L;
-    private int bidID;
+    private int bidID = DEFAULT_BID_ID;
     private int courierID = BidCE.DEFAULT_COURIER_ID;
     private int deliveryRequestID = BidCE.DEFAULT_REQ_ID;
     private Timestamp dropOffTime;

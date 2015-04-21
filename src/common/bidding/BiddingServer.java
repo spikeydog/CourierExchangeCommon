@@ -48,4 +48,6 @@ public interface BiddingServer extends Remote {
 	 * @return 			<code>ExitCode</code>
 	 */
 	public ExitCode acceptBid(DeliveryRequest delivery, Bid bid) throws RemoteException ;
+	
+	public Bid getBid(Bid bid) throws RemoteException;
 }
