@@ -5,11 +5,13 @@
  */
 package common.rating.travellingTime;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Chiru
  */
-public interface TravellingTime {
+public interface TravellingTime extends Serializable {
     
     public void setPersonalTravellingTime(long personalTravellingTime);
     public long getPersonalTravellingTime();

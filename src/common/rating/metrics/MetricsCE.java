@@ -5,12 +5,14 @@
  */
 package common.rating.metrics;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Chiru
  */
-public class MetricsCE implements Metrics{    
-
+public class MetricsCE implements Metrics, Serializable {    
+	private static final long serialVersionUID = 12241L;
        int courierID;
        float averageOverallRating;
        float averageProfesionalismRating;

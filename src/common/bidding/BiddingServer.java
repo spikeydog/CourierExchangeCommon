@@ -6,6 +6,7 @@ import java.util.List;
 
 import common.delivery.DeliveryRequest;
 import common.util.code.bidding.ExitCode;
+import common.user.User;
 
 public interface BiddingServer extends Remote {
 	
@@ -50,4 +51,7 @@ public interface BiddingServer extends Remote {
 	public ExitCode acceptBid(DeliveryRequest delivery, Bid bid) throws RemoteException ;
 	
 	public Bid getBid(Bid bid) throws RemoteException;
+	
+	public Bid getBidByCourierIDDeliveryID(User user, DeliveryRequest dr) throws RemoteException;
+	
 }

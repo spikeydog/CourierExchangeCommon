@@ -6,6 +6,7 @@
 package common.rating.metrics;
 
 import java.rmi.Remote;
+import java.rmi.RemoteException;
 import java.util.List;
 
 /**
@@ -13,6 +14,6 @@ import java.util.List;
  * @author Chiru
  */
 public interface MetricsServer extends Remote{    
-    public Metrics getMetrics(int courierID);    
-    public List<Metrics> getMetricsForAllCouriers();
+    public Metrics getMetrics(int courierID) throws RemoteException ;    
+    public List<Metrics> getMetricsForAllCouriers() throws RemoteException;
 }

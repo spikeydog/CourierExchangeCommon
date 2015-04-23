@@ -5,12 +5,14 @@
  */
 package common.rating.travellingTime;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Chiru
  */
-public class TravellingTimeBE implements TravellingTime{
-    
+public class TravellingTimeBE implements TravellingTime, Serializable {
+    private static final long serialVersionUID = 82728L;
     private long personalTravellingTime;
     private long overallTravellingTime;
 

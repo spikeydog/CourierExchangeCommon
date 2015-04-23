@@ -5,7 +5,6 @@
  */
 package common.rating.travellingTime;
 
-import common.rating.Rating;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 

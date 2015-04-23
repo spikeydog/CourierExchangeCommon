@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @author Chiru
  */
 
-public interface Metrics{
+public interface Metrics extends Serializable {
 	
 	public int getCourierID();
 	public void setCourierID(int courierID);

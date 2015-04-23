@@ -40,6 +40,7 @@ public class Foo {
 	}
 	
 	public class BidServerF implements BiddingServer {
+		public Bid getBidByCourierIDDeliveryID(User user, DeliveryRequest dr) {return null;};
 		public ExitCode placeBid(Bid bid) {return null;}
 		public ExitCode acceptBid(DeliveryRequest r, Bid bid) {return null;}
 		public List<Bid> listBids(DeliveryRequest r, SortCriterion c, SortOrder o) {return null;}

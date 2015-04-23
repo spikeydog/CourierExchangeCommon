@@ -7,6 +7,7 @@ package common.rating;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import common.util.code.rating.ExitCode;
 
 /**
  *
